@@ -56,12 +56,12 @@
 		7D36475225CC70150021A5E6 /* QuatroCantos */ = {
 			isa = PBXGroup;
 			children = (
+				7D36476825CC70900021A5E6 /* Model */,
+				7D36476925CC709C0021A5E6 /* View */,
+				7D36476A25CC70AD0021A5E6 /* Controller */,
 				7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */,
-				7D36475525CC70150021A5E6 /* ContentView.swift */,
 				7D36475725CC70150021A5E6 /* Assets.xcassets */,
-				7D36475C25CC70150021A5E6 /* Persistence.swift */,
 				7D36476125CC70150021A5E6 /* Info.plist */,
-				7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */,
 				7D36475925CC70150021A5E6 /* Preview Content */,
 			);
 			path = QuatroCantos;
@@ -73,6 +73,30 @@
 				7D36475A25CC70150021A5E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D36476825CC70900021A5E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D36475C25CC70150021A5E6 /* Persistence.swift */,
+				7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D36476925CC709C0021A5E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D36475525CC70150021A5E6 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D36476A25CC70AD0021A5E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

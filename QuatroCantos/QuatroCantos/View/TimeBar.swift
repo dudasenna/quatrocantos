@@ -24,6 +24,10 @@ struct ProgressBar: View {
             }.frame(height:15)
         .frame(width:400)
         Spacer()
+        Rectangle()
+            .fill(Color.white)
+            .frame(width: 583, height: 245, alignment: .bottom)
+            .padding(.top,50)
         }
 
 }
@@ -42,7 +46,7 @@ struct TimeBar: View {
             Button(action: {
                 viewRouter.currentPage = .page4
             }, label: {
-                Text("Próximo")
+                Text("Já perdi meu chinelo em Olinda").fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
             })
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in

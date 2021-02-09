@@ -13,7 +13,7 @@ struct QuatroCantosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Participantes()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

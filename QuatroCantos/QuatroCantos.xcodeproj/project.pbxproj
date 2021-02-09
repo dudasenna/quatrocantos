@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		66F7765525CC756300C70A35 /* TimeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7765425CC756300C70A35 /* TimeBar.swift */; };
+		7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EACD25D311470019AE4A /* Lauchscreen.swift */; };
+		7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD025D3117B0019AE4A /* Resultado.swift */; };
+		7D20EAD425D313150019AE4A /* Motherview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD325D313150019AE4A /* Motherview.swift */; };
+		7D20EAD725D316DA0019AE4A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD625D316DA0019AE4A /* Helper.swift */; };
+		7D20EADA25D3189F0019AE4A /* Sugestoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD925D3189F0019AE4A /* Sugestoes.swift */; };
+		7D20EADD25D319540019AE4A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EADC25D319540019AE4A /* ViewRouter.swift */; };
 		7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */; };
 		7D36475625CC70150021A5E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475525CC70150021A5E6 /* ContentView.swift */; };
 		7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D36475725CC70150021A5E6 /* Assets.xcassets */; };
@@ -19,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		66F7765425CC756300C70A35 /* TimeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBar.swift; sourceTree = "<group>"; };
+		7D20EACD25D311470019AE4A /* Lauchscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lauchscreen.swift; sourceTree = "<group>"; };
+		7D20EAD025D3117B0019AE4A /* Resultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resultado.swift; sourceTree = "<group>"; };
+		7D20EAD325D313150019AE4A /* Motherview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motherview.swift; sourceTree = "<group>"; };
+		7D20EAD625D316DA0019AE4A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7D20EAD925D3189F0019AE4A /* Sugestoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sugestoes.swift; sourceTree = "<group>"; };
+		7D20EADC25D319540019AE4A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		7D36475025CC70150021A5E6 /* QuatroCantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuatroCantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuatroCantosApp.swift; sourceTree = "<group>"; };
 		7D36475525CC70150021A5E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +106,12 @@
 				7D36475525CC70150021A5E6 /* ContentView.swift */,
 				7DAF05F325CC7D87003BA82A /* Participantes.swift */,
 				66F7765425CC756300C70A35 /* TimeBar.swift */,
+				7D20EACD25D311470019AE4A /* Lauchscreen.swift */,
+				7D20EAD325D313150019AE4A /* Motherview.swift */,
+				7D20EAD025D3117B0019AE4A /* Resultado.swift */,
+				7D20EAD925D3189F0019AE4A /* Sugestoes.swift */,
+				7D20EAD625D316DA0019AE4A /* Helper.swift */,
+				7D20EADC25D319540019AE4A /* ViewRouter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,9 +194,15 @@
 			files = (
 				7D36475D25CC70150021A5E6 /* Persistence.swift in Sources */,
 				7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */,
+				7D20EAD425D313150019AE4A /* Motherview.swift in Sources */,
+				7D20EADD25D319540019AE4A /* ViewRouter.swift in Sources */,
 				7D36475625CC70150021A5E6 /* ContentView.swift in Sources */,
 				7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */,
+				7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */,
+				7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */,
+				7D20EAD725D316DA0019AE4A /* Helper.swift in Sources */,
 				7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */,
+				7D20EADA25D3189F0019AE4A /* Sugestoes.swift in Sources */,
 				66F7765525CC756300C70A35 /* TimeBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+    
 struct ProgressBar: View {
     var value: CGFloat
 
@@ -18,7 +18,9 @@ struct ProgressBar: View {
                     Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: geometry.size.height)
                         .foregroundColor(Color(UIColor.systemOrange))
                         .animation(.default)
-                } .cornerRadius(45)
+                Image("confete 1").padding(.leading,380)
+                }.cornerRadius(60)
+            .padding(.top, -170)
             }.frame(height:15)
         .frame(width:400)
         Spacer()
@@ -26,18 +28,20 @@ struct ProgressBar: View {
 
 }
 struct TimeBar: View {
-
-    @State var progressBarValue:CGFloat = 1.0
+    @State var progressBarValue:CGFloat = 0
+    
+    let bgcolor = Color(red: 68/255, green: 181/255, blue: 163/255, opacity: 1.0)
 
     var body: some View {
-        VStack {
+        ZStack {
+            bgcolor
             ProgressBar(value: progressBarValue)
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                self.progressBarValue += -0.1
-                }
+                self.progressBarValue += 0.1
             }
-        }
+        } .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+    }
     }
 
 struct preview: PreviewProvider {

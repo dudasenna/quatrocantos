@@ -26,12 +26,19 @@ struct ProgressBar: View {
 
 }
 struct TimeBar: View {
+    
+    @StateObject var viewRouter: ViewRouter
 
     @State var progressBarValue:CGFloat = 1.0
 
     var body: some View {
         VStack {
             ProgressBar(value: progressBarValue)
+            Button(action: {
+                viewRouter.currentPage = .page4
+            }, label: {
+                Text("Próximo")
+            })
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.progressBarValue += -0.1
@@ -42,7 +49,7 @@ struct TimeBar: View {
 
 struct preview: PreviewProvider {
     static var previews: some View {
-        TimeBar()
+        TimeBar(viewRouter: ViewRouter())
     }
 }
 

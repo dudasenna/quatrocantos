@@ -16,17 +16,14 @@ struct Participantes: View {
     let boxes: [Box] = [
         Box(id: 0, imageUrl: "1"),
         Box(id: 1, imageUrl: "2"),
-        Box(id: 2, imageUrl: "3"),
-        Box(id: 3, imageUrl: "4"),
-        Box(id: 4, imageUrl: "5"),
-        Box(id: 5, imageUrl: "6")
+        Box(id: 2, imageUrl: "3")
     ]
     
     var body: some View {
-        Text("Quantas pessoas vão brincar?")
-            .font(.title2)
-            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-        ScrollView(.horizontal) {
+        VStack{
+            Text("Quem instiga pular esse Carnaval contigo?")
+                .font(.title2)
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             HStack {
                 ForEach(boxes, id: \.id) {
                     box in BoxView(box: box).onTapGesture {
@@ -35,8 +32,13 @@ struct Participantes: View {
                     }
                 }.padding(30)
             }
-        }
-        Text("Próximo")
+            Text("Próximo")
+        }.background(
+            Image("bg_participantes")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        )
     }
 }
 

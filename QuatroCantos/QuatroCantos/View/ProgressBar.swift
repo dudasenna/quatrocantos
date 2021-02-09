@@ -25,7 +25,7 @@ struct ProgressBar: View {
         }
 
 }
-struct TimeBar: View {
+struct ContentView2: View {
 
     @State var progressBarValue:CGFloat = 1.0
 
@@ -42,7 +42,11 @@ struct TimeBar: View {
 
 struct preview: PreviewProvider {
     static var previews: some View {
-        TimeBar()
+        Group {
+            ContentView2().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            ContentView2().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            ContentView2().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
     }
 }
 

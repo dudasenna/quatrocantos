@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66F7765525CC756300C70A35 /* TimeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7765425CC756300C70A35 /* TimeBar.swift */; };
+		66F7765525CC756300C70A35 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7765425CC756300C70A35 /* ProgressBar.swift */; };
 		7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */; };
 		7D36475625CC70150021A5E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475525CC70150021A5E6 /* ContentView.swift */; };
 		7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D36475725CC70150021A5E6 /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		66F7765425CC756300C70A35 /* TimeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBar.swift; sourceTree = "<group>"; };
+		66F7765425CC756300C70A35 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		7D36475025CC70150021A5E6 /* QuatroCantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuatroCantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuatroCantosApp.swift; sourceTree = "<group>"; };
 		7D36475525CC70150021A5E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7D36475525CC70150021A5E6 /* ContentView.swift */,
-				66F7765425CC756300C70A35 /* TimeBar.swift */,
+				66F7765425CC756300C70A35 /* ProgressBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */,
 				7D36475625CC70150021A5E6 /* ContentView.swift in Sources */,
 				7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */,
-				66F7765525CC756300C70A35 /* TimeBar.swift in Sources */,
+				66F7765525CC756300C70A35 /* ProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,14 +28,22 @@ struct ProgressBar: View {
 
 }
 struct TimeBar: View {
+
     @State var progressBarValue:CGFloat = 0
     
     let bgcolor = Color(red: 68/255, green: 181/255, blue: 163/255, opacity: 1.0)
+    
+    @StateObject var viewRouter: ViewRouter
 
     var body: some View {
         ZStack {
             bgcolor
             ProgressBar(value: progressBarValue)
+            Button(action: {
+                viewRouter.currentPage = .page4
+            }, label: {
+                Text("Próximo")
+            })
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.progressBarValue += 0.1
@@ -46,7 +54,7 @@ struct TimeBar: View {
 
 struct preview: PreviewProvider {
     static var previews: some View {
-        TimeBar()
+        TimeBar(viewRouter: ViewRouter())
     }
 }
 

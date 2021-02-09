@@ -13,6 +13,9 @@ struct Box {
 }
 
 struct Participantes: View {
+    
+    @StateObject var viewRouter: ViewRouter
+    
     let boxes: [Box] = [
         Box(id: 0, imageUrl: "1"),
         Box(id: 1, imageUrl: "2"),
@@ -27,12 +30,12 @@ struct Participantes: View {
             HStack {
                 ForEach(boxes, id: \.id) {
                     box in BoxView(box: box).onTapGesture {
+                        viewRouter.currentPage = .page3
                         let numeroParticipantes = box.id + 1
                         print("O número de pessoas que vai brincar é \(numeroParticipantes)")
                     }
                 }.padding(30)
             }
-            Text("Próximo")
         }.background(
             Image("bg_participantes")
                 .resizable()
@@ -55,8 +58,7 @@ struct BoxView: View {
 
 struct Participantes_Previews: PreviewProvider {
     static var previews: some View {
-        //Modificar o preview para o modo Landscape
-        Participantes().previewLayout(.fixed(width: 896, height: 414))
+        Participantes(viewRouter: ViewRouter())
         
     }
 }

@@ -62,4 +62,3 @@ struct preview: PreviewProvider {
         TimeBar(viewRouter: ViewRouter())
     }
 }
-

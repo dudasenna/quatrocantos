@@ -9,14 +9,11 @@ import SwiftUI
 
 @main
 struct QuatroCantosApp: App {
-    
-    @StateObject var viewRouter = ViewRouter()
-    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            MotherView(viewRouter: viewRouter)
+            Animation()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

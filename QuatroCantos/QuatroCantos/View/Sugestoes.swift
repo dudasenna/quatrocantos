@@ -12,12 +12,19 @@ struct Sugestoes: View {
     @StateObject var viewRouter: ViewRouter
     
     var body: some View {
-        Text("Sugestão de rolês")
-        Button(action: {
-            viewRouter.currentPage = .page1
-        }, label: {
-            Text("Voltar ao início")
-        })
+        HStack{
+            Button(action: {
+                viewRouter.currentPage = .page1
+            }, label: {
+                Text("Voltar ao início")
+            })
+        }.background(
+            Image("bg_sugestoes")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        )
+        
     }
 }
 

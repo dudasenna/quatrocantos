@@ -30,7 +30,8 @@ struct Participantes: View {
             HStack {
                 ForEach(boxes, id: \.id) {
                     box in BoxView(box: box).onTapGesture {
-                        viewRouter.currentPage = .page3
+//                        mudar page6 para 3 novamente
+                        viewRouter.currentPage = .page6
                         let numeroParticipantes = box.id + 1
                         print("O número de pessoas que vai brincar é \(numeroParticipantes)")
                     }

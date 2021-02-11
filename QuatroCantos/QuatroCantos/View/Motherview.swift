@@ -24,7 +24,6 @@ struct MotherView: View {
             Resultado(viewRouter: viewRouter)
         case .page5:
             Sugestoes(viewRouter: viewRouter)
-        }
     }
 }
 

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66365DD125D5C13700FDD002 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 66365DD025D5C13700FDD002 /* ConfettiSwiftUI */; };
+		66365DD225D5C13700FDD002 /* ConfettiSwiftUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66365DD025D5C13700FDD002 /* ConfettiSwiftUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		66F7765525CC756300C70A35 /* TimeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7765425CC756300C70A35 /* TimeBar.swift */; };
 		7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EACD25D311470019AE4A /* Lauchscreen.swift */; };
 		7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD025D3117B0019AE4A /* Resultado.swift */; };
@@ -23,6 +25,20 @@
 		7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */; };
 		7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF05F325CC7D87003BA82A /* Participantes.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66365DD325D5C13700FDD002 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66365DD225D5C13700FDD002 /* ConfettiSwiftUI in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		66F7765425CC756300C70A35 /* TimeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBar.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66365DD125D5C13700FDD002 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +153,16 @@
 				7D36474C25CC70140021A5E6 /* Sources */,
 				7D36474D25CC70140021A5E6 /* Frameworks */,
 				7D36474E25CC70140021A5E6 /* Resources */,
+				66365DD325D5C13700FDD002 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = QuatroCantos;
+			packageProductDependencies = (
+				66365DD025D5C13700FDD002 /* ConfettiSwiftUI */,
+			);
 			productName = QuatroCantos;
 			productReference = 7D36475025CC70150021A5E6 /* QuatroCantos.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 7D36474725CC70140021A5E6;
+			packageReferences = (
+				66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 7D36475125CC70150021A5E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66365DD025D5C13700FDD002 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */ = {

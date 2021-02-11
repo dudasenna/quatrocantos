@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct ProgressBar: View {
     var value: CGFloat
@@ -26,16 +27,6 @@ struct ProgressBar: View {
         }.frame(height:9)
         .frame(width:400)
         Spacer()
-        //        Button(action: self.animation, label: {
-        //            Color.white
-        //            .frame(width: 583, height: 245, alignment: .bottom)
-        //            .cornerRadius(12)
-        //            .padding(.top,50)
-        //            .rotation3DEffect( isClicked ?
-        //                                .degrees(360) : .degrees(0),
-        //                axis: (x: 1.0, y: 0.0, z: 0.0))
-        //                .animation(.spring())
-        //        })
     }
     
     func animation(){
@@ -43,10 +34,17 @@ struct ProgressBar: View {
     }
     
 }
+
 struct TimeBar: View {
     
     @State var progressBarValue:CGFloat = 0
     @State private var timeIsUp: Bool = false
+    
+    @State var counter1 = 1
+    @State var counter2 = 1
+    @State var counter3 = 1
+    @State var counter4 = 1
+    @State var counter5 = 1
     
     let bgcolor = Color(red: 68/255, green: 181/255, blue: 163/255, opacity: 1.0)
     
@@ -60,7 +58,7 @@ struct TimeBar: View {
         ZStack {
             bgcolor
             ProgressBar(value: progressBarValue)
-    
+            
             
             Color.white
                 .frame(width: 583, height: 245, alignment: .bottom)
@@ -72,42 +70,44 @@ struct TimeBar: View {
                 .animation(.spring())
             
             Text(perrengueAleatorio).fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
-           
+            
             Button(action: {
                 respondeu()
                 
             }, label: {
-                Text("Responder")
+                Text("")
+                    .frame(width: 583, height: 245, alignment: .bottom)
                 
             })
+            
+            ConfettiCannon(counter: $counter5, num: 80, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 300)
+            
+            VStack{
+                HStack{
+                    ConfettiCannon(counter: $counter1, num: 20, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+                    Spacer()
+                    ConfettiCannon(counter: $counter2, num: 20, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+                }
+                Spacer()
+                HStack{
+                    ConfettiCannon(counter: $counter3, num: 20, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+                    Spacer()
+                    ConfettiCannon(counter: $counter4, num: 20, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
+                }
                 
-            Button(action: {
-                viewRouter.currentPage = .page4
-            }, label: {
-                Text("Próximo")
-            })
-            .padding(.top, 50)
+            }.frame(width: 200, height: 200, alignment: .center)
         }
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                //                self.progressBarValue<=1.0
-                //                    ?
-                
-                
-                
                 if(progressBarValue < 1.0){
                     self.progressBarValue += 0.1
                 }
                 else {
                     timer.invalidate()
                 }
-                
-                
-                //                : self.progressBarValue=0
-                
-                
                 print("oi")
                 print(self.progressBarValue)
+                
             }
         } .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
@@ -128,7 +128,20 @@ struct TimeBar: View {
         }
         //zerar o timer
         self.progressBarValue = 0
+        counter1 += 1
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            counter4 += 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            counter2 += 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            counter3 += 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            counter5 += 1
+        }
         
     }
 }

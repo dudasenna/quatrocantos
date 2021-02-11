@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SpriteKit
+import GameKit
     
 struct ProgressBar: View {
     var value: CGFloat
@@ -29,7 +31,10 @@ struct ProgressBar: View {
             .frame(width: 583, height: 245, alignment: .bottom)
             .cornerRadius(12)
             .padding(.top,50)
-        }
+        
+        SpriteView(scene: GameScene(size: CGSize(width: 300, height: 400)))
+                    .frame(width: 500, height: 250)
+    }
 
 }
 struct TimeBar: View {

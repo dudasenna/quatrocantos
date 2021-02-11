@@ -13,8 +13,8 @@ var answer = "neutral"
 
 class GameScene: SKScene {
 
-    var flower: SKNode!
-    var cover: SKNode!
+//    var flower: SKNode!
+//    var cover: SKNode!
     private var lastUpdateTime : TimeInterval = 0
     var motionManager = CMMotionManager()
     var pitch: Double = 0.0
@@ -24,6 +24,7 @@ class GameScene: SKScene {
 
         self.lastUpdateTime = 0
 //        flower = self.childNode(withName: "flower")
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -39,13 +40,13 @@ class GameScene: SKScene {
             print(pitch)
             print(roll)
             
-            if roll > -1.1 {
+            if roll < 1 {
                 answer = "false"
 //                cover = self.childNode(withName: "cover")
                 backgroundColor = .red
 //                flower = SKSpriteNode(imageNamed: "cover")
                 self.motionManager.stopDeviceMotionUpdates()
-            } else if roll < -1.9 {
+            } else if roll > 1.8 {
                 answer = "true"
 //                flower = self.childNode(withName: "flower")
                 backgroundColor = .green

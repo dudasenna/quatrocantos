@@ -17,16 +17,16 @@ class GameViewController: UIViewController {
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         
-        var button = UIButton()
-        button.backgroundColor = .gray
-        
-        if answer == "falso" {
-            button.backgroundColor = .red
-        }
-    
-        else if answer == "true" {
-            button.backgroundColor = .green
-        }
+//        var button = UIButton()
+//        button.backgroundColor = .gray
+//
+//        if answer == "falso" {
+//            button.backgroundColor = .red
+//        }
+//
+//        else if answer == "true" {
+//            button.backgroundColor = .green
+//        }
         
         if let scene = GKScene(fileNamed: "GameScene") {
             

@@ -9,6 +9,8 @@ import SwiftUI
     
 struct ProgressBar: View {
     var value: CGFloat
+    
+    @State private var isClicked: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -24,12 +26,21 @@ struct ProgressBar: View {
             }.frame(height:9)
         .frame(width:400)
         Spacer()
-        Rectangle()
-            .fill(Color.white)
-            .frame(width: 583, height: 245, alignment: .bottom)
-            .cornerRadius(12)
-            .padding(.top,50)
+//        Button(action: self.animation, label: {
+//            Color.white
+//            .frame(width: 583, height: 245, alignment: .bottom)
+//            .cornerRadius(12)
+//            .padding(.top,50)
+//            .rotation3DEffect( isClicked ?
+//                                .degrees(360) : .degrees(0),
+//                axis: (x: 1.0, y: 0.0, z: 0.0))
+//                .animation(.spring())
+//        })
         }
+    
+    func animation(){
+        self.isClicked.toggle()
+    }
 
 }
 struct TimeBar: View {
@@ -49,9 +60,26 @@ struct TimeBar: View {
             }, label: {
                 Text("Já perdi meu chinelo em Olinda").fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
             })
-        }.onAppear {
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                self.progressBarValue += 0.1
+            
+                Color.white
+                .frame(width: 583, height: 245, alignment: .bottom)
+                .cornerRadius(12)
+                .padding(.top,50)
+                    .rotation3DEffect( self.progressBarValue==1.0 ?
+                                    .degrees(360) : .degrees(0),
+                    axis: (x: 1.0, y: 0.0, z: 0.0))
+                    .animation(.spring())
+        }
+        .onAppear {
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: self.progressBarValue<1.0 ? true : false) { timer in
+//                self.progressBarValue<=1.0
+//                    ?
+                    self.progressBarValue += 0.1
+//                : self.progressBarValue=0
+                
+                
+                print("oi")
+                print(self.progressBarValue)
             }
         } .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }

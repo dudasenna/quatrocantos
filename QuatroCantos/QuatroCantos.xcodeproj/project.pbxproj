@@ -21,6 +21,8 @@
 		7D36475B25CC70150021A5E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D36475A25CC70150021A5E6 /* Preview Assets.xcassets */; };
 		7D36475D25CC70150021A5E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475C25CC70150021A5E6 /* Persistence.swift */; };
 		7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */; };
+		7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */; };
+		7D5EDA5925D5C75500896035 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5825D5C75500896035 /* AudioPlayer.swift */; };
 		7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF05F325CC7D87003BA82A /* Participantes.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		7D36475C25CC70150021A5E6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7D36475F25CC70150021A5E6 /* QuatroCantos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuatroCantos.xcdatamodel; sourceTree = "<group>"; };
 		7D36476125CC70150021A5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vassourinhas.mp3; sourceTree = "<group>"; };
+		7D5EDA5825D5C75500896035 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		7DAF05F325CC7D87003BA82A /* Participantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 				7D36476A25CC70AD0021A5E6 /* Controller */,
 				7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */,
 				7D36475725CC70150021A5E6 /* Assets.xcassets */,
+				7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */,
 				7D36476125CC70150021A5E6 /* Info.plist */,
 				7D36475925CC70150021A5E6 /* Preview Content */,
 			);
@@ -115,6 +120,7 @@
 				7D20EAD625D316DA0019AE4A /* Helper.swift */,
 				7D20EADC25D319540019AE4A /* ViewRouter.swift */,
 				7D20EB0225D46E8F0019AE4A /* Instrucoes.swift */,
+				7D5EDA5825D5C75500896035 /* AudioPlayer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */,
 				7D36475B25CC70150021A5E6 /* Preview Assets.xcassets in Resources */,
 				7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */,
 			);
@@ -208,6 +215,7 @@
 				7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */,
 				7D20EADA25D3189F0019AE4A /* Sugestoes.swift in Sources */,
 				66F7765525CC756300C70A35 /* TimeBar.swift in Sources */,
+				7D5EDA5925D5C75500896035 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

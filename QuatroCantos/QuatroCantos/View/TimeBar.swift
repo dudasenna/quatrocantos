@@ -33,6 +33,9 @@ struct ProgressBar: View {
 
 }
 struct TimeBar: View {
+    
+    // Inicializa o audio player como um Observable Object
+    @ObservedObject var audioPlayer = AudioPlayer()
 
     @State var progressBarValue:CGFloat = 0
     

@@ -25,8 +25,8 @@ struct Launchscreen: View {
                         .foregroundColor(Color("roxo"))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .underline()
-                        //.position(x: 64, y: 64)
-                }).padding(.leading, -300)
+                        .padding(.trailing, UIScreen.main.bounds.width*0.75)
+                })
                 
                 Image("ladeirada")
                     .resizable()

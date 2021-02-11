@@ -13,18 +13,26 @@ struct Instrucoes: View {
     var body: some View {
         
         ZStack{
+            Spacer()
             Color("roxo")
                 .ignoresSafeArea(.all)
             
+            RoundedRectangle(cornerRadius:20)
+                .foregroundColor(.white)
+                .padding(.horizontal, 150)
+                .padding(.vertical, 50)
+                .shadow(color: Color("cinza_claro"), radius: 2, x: 0, y: 4)
+           
             VStack{
-                Text("Conte sua história Conte sua história  Conte sua história Conte sua história Conte sua história  Conte sua história Conte sua história Conte sua história  Conte sua história Conte sua história Conte sua história  Conte sua história")
-                    .padding(.all,50)
-                    .background(Color.white)
-                    //.padding(.all, 50)
-                    .cornerRadius(20)
                 
-                //Spacer(minLength: 0)
+                Text("Instruções")
+                    .font(.title2)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 
+                Text("Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história")
+                    .padding(.horizontal, 80)
+                    .padding(.vertical, 20)
+
                 Button(action: {
                     viewRouter.currentPage = .page2
                 }, label: {
@@ -32,10 +40,13 @@ struct Instrucoes: View {
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.white)
                         .padding()
-                        .background(Color("vermelho"))
-                        
+                        .background(Color("vermelho")
+                                        .cornerRadius(5)
+                                        .shadow(color: Color("cinza_claro"), radius: 2, x: 0, y: 4))
                 })
             }
+            .padding(.horizontal, 100)
+            .padding(.vertical, 50)
         }
         
     }

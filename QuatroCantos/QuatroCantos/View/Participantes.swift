@@ -25,8 +25,9 @@ struct Participantes: View {
     var body: some View {
         VStack{
             Text("Quem instiga pular esse Carnaval contigo?")
-                .font(.title2)
+                .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .padding(.top, -20)
             HStack {
                 ForEach(boxes, id: \.id) {
                     box in BoxView(box: box).onTapGesture {
@@ -35,7 +36,9 @@ struct Participantes: View {
                         print("O número de pessoas que vai brincar é \(numeroParticipantes)")
                     }
                 }.padding(30)
+                .shadow(color: Color("cinza_claro"), radius: 2, x: 0, y: 4)
             }
+            .padding()
         }.background(
             Image("bg_participantes")
                 .resizable()
@@ -52,7 +55,7 @@ struct BoxView: View {
         Image("\(box.imageUrl)")
             .resizable()
             .cornerRadius(12)
-            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+            .frame(width: 171, height: 128)
     }
 }
 

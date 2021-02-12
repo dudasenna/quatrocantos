@@ -18,8 +18,8 @@ struct Launchscreen: View {
     
     var body: some View {
         ZStack{
-            Color("amarelo")
-                .edgesIgnoringSafeArea(.all)
+            //Color("amarelo")
+                //.edgesIgnoringSafeArea(.all)
             VStack{
                 HStack {
                     Button(action: {
@@ -67,12 +67,12 @@ struct Launchscreen: View {
         .onAppear(perform: {
             MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
         })
-//        .background(
-//                    Image("bg_launchscreen")
-//                        .resizable()
-//                        .edgesIgnoringSafeArea(.all)
-//                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-//                )
+        .background(
+                    Image("bg_launchscreen")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                )
         
     }
     

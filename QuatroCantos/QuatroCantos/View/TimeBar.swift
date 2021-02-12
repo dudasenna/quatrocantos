@@ -48,9 +48,11 @@ struct TimeBar: View {
     
     let bgcolor = Color(red: 68/255, green: 181/255, blue: 163/255, opacity: 1.0)
     
-    let perrengues: [String] = ["Já perdi o meu chinelo em Olinda", "Quase morri sufocade com o aperto", "Troquei Olinda pelo Galo da Madrugada", "sadsdga"]
+    let perrengues: [String] = ["Já perdi o meu chinelo em Olinda", "Quase morri sufocade com o aperto", "Troquei Olinda pelo Galo da Madrugada", "Já voltei sentado no chão do ônibus"]
     @State var perrengueAleatorio:String = "Já fui no bloco da Lama"
     @State var contadorAuxiliar:Int = 0
+    
+    let hapitcs = UINotificationFeedbackGenerator()
     
     @StateObject var viewRouter: ViewRouter
     
@@ -142,6 +144,9 @@ struct TimeBar: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             counter5 += 1
         }
+        
+        //adiciona feedback com haptics
+        hapitcs.notificationOccurred(.success)
         
     }
 }

@@ -6,27 +6,48 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct Launchscreen: View {
     
     @StateObject var viewRouter: ViewRouter
+    
+    // Variaveis para controlar a música
+    @State var isPlaying: Bool = true
+    @State var buttonImageName: String = "speaker.wave.2.fill"
     
     var body: some View {
         ZStack{
             Color("amarelo")
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                HStack {
+                    Button(action: {
+                        print("apertou botão de instruções")
+                        viewRouter.currentPage = .page6
+                    }, label: {
+                        Text("Instruções")
+                            .foregroundColor(Color("roxo"))
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .underline()
+                            .padding(.trailing, UIScreen.main.bounds.width*0.75)
+                    })
+                    
+                    // Chama a função starPlayback do audioPlayer
+                    Button(action: {
+                        print("apertou botão de som")
+                        modificarSom()
+                    }, label: {
+                        Image(systemName: buttonImageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 32, height: 32, alignment: .trailing)
+                            .foregroundColor(Color("roxo"))
+                        
+                    })
+                    
+                }
                 
-                Button(action: {
-                    print("apertou botão de instruções")
-                    viewRouter.currentPage = .page6
-                }, label: {
-                    Text("Instruções")
-                        .foregroundColor(Color("roxo"))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .underline()
-                        .padding(.trailing, UIScreen.main.bounds.width*0.75)
-                })
                 
                 Image("ladeirada")
                     .resizable()
@@ -42,6 +63,9 @@ struct Launchscreen: View {
                 }
             }
         }
+        .onAppear(perform: {
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
+        })
 //        .background(
 //                    Image("bg_launchscreen")
 //                        .resizable()
@@ -50,6 +74,20 @@ struct Launchscreen: View {
 //                )
         
     }
+    
+    func modificarSom(){
+        self.isPlaying.toggle()
+        
+        if (isPlaying){
+            self.buttonImageName = "speaker.wave.2.fill"
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
+        } else {
+            self.buttonImageName = "speaker.slash.fill"
+            MusicPlayer.shared.stopBackgroundMusic()
+        }
+        
+    }
+
 }
 
 struct Launchscreen_Previews: PreviewProvider {

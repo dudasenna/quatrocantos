@@ -24,10 +24,13 @@ struct Participantes: View {
     
     var body: some View {
         VStack{
-            Text("Quem instiga pular esse Carnaval contigo?")
-                .font(.title)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .padding(.top, -20)
+            Text("Quem instiga viver esse Carnaval contigo?")
+                .font(.custom("Poppins-Regular", size: 24))
+                .foregroundColor(.white)
+                .fontWeight(.semibold)
+                .padding(.horizontal, 5)
+                .background(Color("roxo"))
+                //.padding(.top, -20)
             HStack {
                 ForEach(boxes, id: \.id) {
                     box in BoxView(box: box).onTapGesture {

@@ -27,8 +27,9 @@ struct Launchscreen: View {
                         viewRouter.currentPage = .page6
                     }, label: {
                         Text("Instruções")
+                            .font(.custom("Poppins-Regular", size: 16))
                             .foregroundColor(Color("roxo"))
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.semibold)
                             .underline()
                             .padding(.trailing, UIScreen.main.bounds.width*0.75)
                     })

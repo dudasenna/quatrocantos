@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		22ED422A25D599250030DC61 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED422925D599250030DC61 /* GameScene.swift */; };
 		22ED422D25D599590030DC61 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED422C25D599590030DC61 /* GameViewController.swift */; };
+		66365DD125D5C13700FDD002 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 66365DD025D5C13700FDD002 /* ConfettiSwiftUI */; };
+		66365DD225D5C13700FDD002 /* ConfettiSwiftUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66365DD025D5C13700FDD002 /* ConfettiSwiftUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		66F7765525CC756300C70A35 /* TimeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7765425CC756300C70A35 /* TimeBar.swift */; };
 		7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EACD25D311470019AE4A /* Lauchscreen.swift */; };
 		7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD025D3117B0019AE4A /* Resultado.swift */; };
@@ -16,14 +18,31 @@
 		7D20EAD725D316DA0019AE4A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD625D316DA0019AE4A /* Helper.swift */; };
 		7D20EADA25D3189F0019AE4A /* Sugestoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EAD925D3189F0019AE4A /* Sugestoes.swift */; };
 		7D20EADD25D319540019AE4A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EADC25D319540019AE4A /* ViewRouter.swift */; };
+		7D20EB0325D46E8F0019AE4A /* Instrucoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20EB0225D46E8F0019AE4A /* Instrucoes.swift */; };
 		7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */; };
 		7D36475625CC70150021A5E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475525CC70150021A5E6 /* ContentView.swift */; };
 		7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D36475725CC70150021A5E6 /* Assets.xcassets */; };
 		7D36475B25CC70150021A5E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D36475A25CC70150021A5E6 /* Preview Assets.xcassets */; };
 		7D36475D25CC70150021A5E6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475C25CC70150021A5E6 /* Persistence.swift */; };
 		7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */; };
+		7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */; };
+		7D5EDA5E25D6043E00896035 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */; };
 		7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF05F325CC7D87003BA82A /* Participantes.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66365DD325D5C13700FDD002 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66365DD225D5C13700FDD002 /* ConfettiSwiftUI in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22ED422925D599250030DC61 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -35,6 +54,7 @@
 		7D20EAD625D316DA0019AE4A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7D20EAD925D3189F0019AE4A /* Sugestoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sugestoes.swift; sourceTree = "<group>"; };
 		7D20EADC25D319540019AE4A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		7D20EB0225D46E8F0019AE4A /* Instrucoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrucoes.swift; sourceTree = "<group>"; };
 		7D36475025CC70150021A5E6 /* QuatroCantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuatroCantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuatroCantosApp.swift; sourceTree = "<group>"; };
 		7D36475525CC70150021A5E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +63,8 @@
 		7D36475C25CC70150021A5E6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7D36475F25CC70150021A5E6 /* QuatroCantos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuatroCantos.xcdatamodel; sourceTree = "<group>"; };
 		7D36476125CC70150021A5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vassourinhas.mp3; sourceTree = "<group>"; };
+		7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		7DAF05F325CC7D87003BA82A /* Participantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66365DD125D5C13700FDD002 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				7D36476A25CC70AD0021A5E6 /* Controller */,
 				7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */,
 				7D36475725CC70150021A5E6 /* Assets.xcassets */,
+				7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */,
 				7D36476125CC70150021A5E6 /* Info.plist */,
 				7D36475925CC70150021A5E6 /* Preview Content */,
 			);
@@ -111,12 +135,14 @@
 				7DAF05F325CC7D87003BA82A /* Participantes.swift */,
 				66F7765425CC756300C70A35 /* TimeBar.swift */,
 				7D20EACD25D311470019AE4A /* Lauchscreen.swift */,
+				7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */,
 				7D20EAD325D313150019AE4A /* Motherview.swift */,
 				7D20EAD025D3117B0019AE4A /* Resultado.swift */,
 				7D20EAD925D3189F0019AE4A /* Sugestoes.swift */,
 				7D20EAD625D316DA0019AE4A /* Helper.swift */,
 				7D20EADC25D319540019AE4A /* ViewRouter.swift */,
 				22ED422925D599250030DC61 /* GameScene.swift */,
+				7D20EB0225D46E8F0019AE4A /* Instrucoes.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,12 +165,16 @@
 				7D36474C25CC70140021A5E6 /* Sources */,
 				7D36474D25CC70140021A5E6 /* Frameworks */,
 				7D36474E25CC70140021A5E6 /* Resources */,
+				66365DD325D5C13700FDD002 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = QuatroCantos;
+			packageProductDependencies = (
+				66365DD025D5C13700FDD002 /* ConfettiSwiftUI */,
+			);
 			productName = QuatroCantos;
 			productReference = 7D36475025CC70150021A5E6 /* QuatroCantos.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 7D36474725CC70140021A5E6;
+			packageReferences = (
+				66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 7D36475125CC70150021A5E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */,
 				7D36475B25CC70150021A5E6 /* Preview Assets.xcassets in Resources */,
 				7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */,
 			);
@@ -206,6 +240,8 @@
 				7D36475625CC70150021A5E6 /* ContentView.swift in Sources */,
 				7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */,
 				7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */,
+				7D20EB0325D46E8F0019AE4A /* Instrucoes.swift in Sources */,
+				7D5EDA5E25D6043E00896035 /* MusicPlayer.swift in Sources */,
 				7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */,
 				22ED422A25D599250030DC61 /* GameScene.swift in Sources */,
 				7D20EAD725D316DA0019AE4A /* Helper.swift in Sources */,
@@ -400,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66365DD025D5C13700FDD002 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66365DCF25D5C13700FDD002 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */ = {

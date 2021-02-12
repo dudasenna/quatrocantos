@@ -18,8 +18,8 @@ struct Launchscreen: View {
     
     var body: some View {
         ZStack{
-            Color("amarelo")
-                .edgesIgnoringSafeArea(.all)
+            //Color("amarelo")
+                //.edgesIgnoringSafeArea(.all)
             VStack{
                 HStack {
                     Button(action: {
@@ -27,8 +27,9 @@ struct Launchscreen: View {
                         viewRouter.currentPage = .page6
                     }, label: {
                         Text("Instruções")
+                            .font(.custom("Poppins-Regular", size: 16))
                             .foregroundColor(Color("roxo"))
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.semibold)
                             .underline()
                             .padding(.trailing, UIScreen.main.bounds.width*0.75)
                     })
@@ -66,12 +67,12 @@ struct Launchscreen: View {
         .onAppear(perform: {
             MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
         })
-//        .background(
-//                    Image("bg_launchscreen")
-//                        .resizable()
-//                        .edgesIgnoringSafeArea(.all)
-//                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-//                )
+        .background(
+                    Image("bg_launchscreen")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                )
         
     }
     

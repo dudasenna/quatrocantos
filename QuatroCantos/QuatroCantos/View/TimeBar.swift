@@ -82,7 +82,13 @@ struct TimeBar: View {
                                    axis: (x: 1.0, y: 0.0, z: 0.0))
                 .animation(.spring())
             
-            Text(perrengueAleatorio).fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
+            Text(perrengueAleatorio)
+                .font(.custom("Poppins-Regular", size: 30))
+                .fontWeight(.semibold)
+                .foregroundColor(Color("roxo_texto"))
+                .multilineTextAlignment(.center)
+                .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                .frame(width: 530)
             
             
             Button(action: {

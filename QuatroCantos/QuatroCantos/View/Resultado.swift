@@ -21,21 +21,25 @@ struct Resultado: View {
             
             VStack{
                 VStack{
+                    Image("ei_folioes")
+                        .renderingMode(.original)
+                        .scaleEffect(1.2)
+                        .padding(.top, -50)
                     Group {
-                        Text("Ei, foliões danados! \n")
-                            .bold()
-                            .font(.title3)
-                        +
+                        
                         Text("\n Tem coisa melhor que descer as ladeiras nessa festa? \n \n Vem descobrir qual o ")
+                            .font(.custom("Poppins-Regular", size: 16))
                         +
                         Text("próximo rolê")
+                            .font(.custom("Poppins-Regular", size: 16))
                             .bold()
                         +
                         Text(" de vocês pra \n não deixar essa alegria passar!")
+                            .font(.custom("Poppins-Regular", size: 16))
                     }
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 80)
-                    .padding(.vertical, 20)
+                    .padding(.bottom, 20)
                 }
                 
                 
@@ -43,6 +47,7 @@ struct Resultado: View {
                     viewRouter.currentPage = .page5
                 }, label: {
                     Text("Simbora!")
+                        .font(.custom("Poppins-Regular", size: 18))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.white)
                         .padding()

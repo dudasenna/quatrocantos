@@ -23,6 +23,7 @@
 		7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */; };
 		7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */; };
 		7D5EDA5925D5C75500896035 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5825D5C75500896035 /* AudioPlayer.swift */; };
+		7D5EDA5E25D6043E00896035 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */; };
 		7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF05F325CC7D87003BA82A /* Participantes.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		7D36476125CC70150021A5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vassourinhas.mp3; sourceTree = "<group>"; };
 		7D5EDA5825D5C75500896035 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		7DAF05F325CC7D87003BA82A /* Participantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				7DAF05F325CC7D87003BA82A /* Participantes.swift */,
 				66F7765425CC756300C70A35 /* TimeBar.swift */,
 				7D20EACD25D311470019AE4A /* Lauchscreen.swift */,
+				7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */,
 				7D20EAD325D313150019AE4A /* Motherview.swift */,
 				7D20EAD025D3117B0019AE4A /* Resultado.swift */,
 				7D20EAD925D3189F0019AE4A /* Sugestoes.swift */,
@@ -210,6 +213,7 @@
 				7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */,
 				7D20EACE25D311470019AE4A /* Lauchscreen.swift in Sources */,
 				7D20EB0325D46E8F0019AE4A /* Instrucoes.swift in Sources */,
+				7D5EDA5E25D6043E00896035 /* MusicPlayer.swift in Sources */,
 				7D20EAD125D3117B0019AE4A /* Resultado.swift in Sources */,
 				7D20EAD725D316DA0019AE4A /* Helper.swift in Sources */,
 				7D36475425CC70150021A5E6 /* QuatroCantosApp.swift in Sources */,

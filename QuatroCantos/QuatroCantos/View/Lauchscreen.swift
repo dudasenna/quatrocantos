@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct Launchscreen: View {
     
     @StateObject var viewRouter: ViewRouter
     
-    // Inicializa o audio player como um Observable Object
-    @ObservedObject var audioPlayer = AudioPlayer()
+    // Variaveis para controlar a música
+    @State var isPlaying: Bool = true
+    @State var buttonImageName: String = "speaker.wave.2.fill"
     
     var body: some View {
         ZStack{
@@ -34,9 +36,9 @@ struct Launchscreen: View {
                     // Chama a função starPlayback do audioPlayer
                     Button(action: {
                         print("apertou botão de som")
-                        self.audioPlayer.startPlayBack(fileName: "vassourinhas", fileExtension: "mp3")
+                        modificarSom()
                     }, label: {
-                        Image(systemName: "speaker.wave.2.fill")
+                        Image(systemName: buttonImageName)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 32, height: 32, alignment: .trailing)
@@ -61,6 +63,9 @@ struct Launchscreen: View {
                 }
             }
         }
+        .onAppear(perform: {
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
+        })
 //        .background(
 //                    Image("bg_launchscreen")
 //                        .resizable()
@@ -69,6 +74,20 @@ struct Launchscreen: View {
 //                )
         
     }
+    
+    func modificarSom(){
+        self.isPlaying.toggle()
+        
+        if (isPlaying){
+            self.buttonImageName = "speaker.wave.2.fill"
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "vassourinhas")
+        } else {
+            self.buttonImageName = "speaker.slash.fill"
+            MusicPlayer.shared.stopBackgroundMusic()
+        }
+        
+    }
+
 }
 
 struct Launchscreen_Previews: PreviewProvider {

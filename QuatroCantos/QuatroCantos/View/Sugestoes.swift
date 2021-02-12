@@ -11,9 +11,6 @@ struct Sugestoes: View {
     
     @StateObject var viewRouter: ViewRouter
     
-    // Inicializa o audio player como um Observable Object
-    @ObservedObject var audioPlayer = AudioPlayer()
-    
     var body: some View {
         Text("Sugestão de rolês")
         Button(action: {

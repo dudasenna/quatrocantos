@@ -16,9 +16,6 @@ struct Participantes: View {
     
     @StateObject var viewRouter: ViewRouter
     
-    // Inicializa o audio player como um Observable Object
-    @ObservedObject var audioPlayer = AudioPlayer()
-    
     let boxes: [Box] = [
         Box(id: 0, imageUrl: "1"),
         Box(id: 1, imageUrl: "2"),

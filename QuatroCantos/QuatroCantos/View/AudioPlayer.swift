@@ -27,15 +27,15 @@ class AudioPlayer: ObservableObject {
         }
         
         // Iniciar uma sessao de audio
-        let playbackSession = AVAudioSession.sharedInstance()
-        
-        // Saída de áudio
-        do {
-            try
-                playbackSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-        } catch {
-            print("Não conseguiu tocar a música")
-        }
+//        let playbackSession = AVAudioSession.sharedInstance()
+//        
+//        // Saída de áudio
+//        do {
+//            try
+//                playbackSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+//        } catch {
+//            print("Não conseguiu tocar a música")
+//        }
         
         // Tocar o som e notificar as views que estão observando
         do {

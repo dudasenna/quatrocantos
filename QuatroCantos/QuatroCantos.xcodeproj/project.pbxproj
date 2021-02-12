@@ -25,6 +25,8 @@
 		7D36476025CC70150021A5E6 /* QuatroCantos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D36475E25CC70150021A5E6 /* QuatroCantos.xcdatamodeld */; };
 		7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */; };
 		7D5EDA5E25D6043E00896035 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */; };
+		7D6B726825D6DA8600FD357D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6B726625D6DA8600FD357D /* Poppins-Bold.ttf */; };
+		7D6B726925D6DA8600FD357D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6B726725D6DA8600FD357D /* Poppins-Regular.ttf */; };
 		7DAF05F425CC7D87003BA82A /* Participantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF05F325CC7D87003BA82A /* Participantes.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		7D36476125CC70150021A5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vassourinhas.mp3; sourceTree = "<group>"; };
 		7D5EDA5D25D6043E00896035 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		7D6B726625D6DA8600FD357D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7D6B726725D6DA8600FD357D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		7DAF05F325CC7D87003BA82A /* Participantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 				7D36476A25CC70AD0021A5E6 /* Controller */,
 				7D36475325CC70150021A5E6 /* QuatroCantosApp.swift */,
 				7D36475725CC70150021A5E6 /* Assets.xcassets */,
+				7D6B726525D6DA6500FD357D /* Fonts */,
 				7D5EDA5525D5C71A00896035 /* vassourinhas.mp3 */,
 				7D36476125CC70150021A5E6 /* Info.plist */,
 				7D36475925CC70150021A5E6 /* Preview Content */,
@@ -147,6 +152,15 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D6B726525D6DA6500FD357D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D6B726625D6DA8600FD357D /* Poppins-Bold.ttf */,
+				7D6B726725D6DA8600FD357D /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +230,8 @@
 				7D5EDA5625D5C71A00896035 /* vassourinhas.mp3 in Resources */,
 				7D36475B25CC70150021A5E6 /* Preview Assets.xcassets in Resources */,
 				7D36475825CC70150021A5E6 /* Assets.xcassets in Resources */,
+				7D6B726825D6DA8600FD357D /* Poppins-Bold.ttf in Resources */,
+				7D6B726925D6DA8600FD357D /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

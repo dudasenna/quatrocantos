@@ -26,10 +26,11 @@ struct Instrucoes: View {
             VStack{
                 
                 Text("Instruções")
-                    .font(.title2)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .font(.custom("Poppins-Regular", size: 19))
+                    .fontWeight(.semibold)
                 
                 Text("Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história Mande sua história")
+                    .font(.custom("Poppins-Regular", size: 16))
                     .padding(.horizontal, 80)
                     .padding(.vertical, 20)
 
@@ -37,6 +38,7 @@ struct Instrucoes: View {
                     viewRouter.currentPage = .page2
                 }, label: {
                     Text("Simbora!")
+                        .font(.custom("Poppins-Regular", size: 18))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.white)
                         .padding()

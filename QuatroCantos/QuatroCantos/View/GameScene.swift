@@ -10,6 +10,8 @@ import GameplayKit
 import CoreMotion
 
 var answer = "neutral"
+var counterAnswers = 0
+var suggestionIndex = 0
 
 class GameScene: SKScene {
 
@@ -19,6 +21,8 @@ class GameScene: SKScene {
     var motionManager = CMMotionManager()
     var pitch: Double = 0.0
     var roll: Double = 0.0
+    var counterNunca = 0
+    var counterJa = 0
     
     override func sceneDidLoad() {
 
@@ -33,6 +37,8 @@ class GameScene: SKScene {
         self.motionManager.showsDeviceMovementDisplay = true
         self.motionManager.startDeviceMotionUpdates(using: .xMagneticNorthZVertical)
         
+        backgroundColor = .systemPink
+        
         if let data = self.motionManager.deviceMotion {
             pitch = data.attitude.pitch
             roll = data.attitude.roll
@@ -41,19 +47,32 @@ class GameScene: SKScene {
             print(roll)
             
             if roll < 1 {
+                if answer == "neutral" && counterAnswers < 4 {
+                    counterNunca += 1
+                    counterAnswers += 1
+                }
                 answer = "false"
-//                cover = self.childNode(withName: "cover")
-                backgroundColor = .red
-//                flower = SKSpriteNode(imageNamed: "cover")
                 self.motionManager.stopDeviceMotionUpdates()
-            } else if roll > 1.8 {
+            } else if roll > 1.8 && counterAnswers < 4 {
+                if answer == "neutral" {
+                    counterJa += 1
+                    counterAnswers += 1
+                }
                 answer = "true"
-//                flower = self.childNode(withName: "flower")
                 backgroundColor = .green
                 self.motionManager.stopDeviceMotionUpdates()
             } else {
-                backgroundColor = .blue
+                answer = "neutral"
             }
+            
+            if counterJa <= 1 {
+                suggestionIndex = 0
+            } else if counterJa >= 4 {
+                suggestionIndex = 2
+            } else {
+                suggestionIndex = 1
+            }
+            
         }
         
 //        flower.physicsBody!.applyForce(CGVector(dx: 50*roll, dy: 50*(-pitch)))

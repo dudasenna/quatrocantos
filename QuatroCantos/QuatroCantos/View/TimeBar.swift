@@ -8,6 +8,9 @@
 import SwiftUI
 import SpriteKit
 import GameKit
+
+var sentences = ["Já perdeu um chinelo em Olinda?", "Já foi levado por um bloco?", "Já disse a um amigo 'a gente se encontra lá' e nunca se acharam?", "Opção 4", "Opção 5"]
+var suggestions = ["Rolê sugerido 1", "Rolê sugerido 2", "Rolê sugerido 3"]
     
 struct ProgressBar: View {
     var value: CGFloat
@@ -33,7 +36,7 @@ struct ProgressBar: View {
             .padding(.top,50)
         
         SpriteView(scene: GameScene(size: CGSize(width: 300, height: 400)))
-                    .frame(width: 500, height: 250)
+                    .frame(width: 1, height: 1)
     }
 
 }
@@ -52,13 +55,13 @@ struct TimeBar: View {
             Button(action: {
                 viewRouter.currentPage = .page4
             }, label: {
-                Text("Já perdi meu chinelo em Olinda").fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
+                Text(sentences[counterAnswers]).fontWeight(.semibold).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
             })
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.progressBarValue += 0.1
             }
-        } .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        } .edgesIgnoringSafeArea(.all)
     }
     }
 

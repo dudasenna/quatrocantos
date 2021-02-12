@@ -9,17 +9,20 @@ import SwiftUI
     
 struct ProgressBar: View {
     var value: CGFloat
+    
+    let greenTimer = Color(red: 10/255, green: 160/255, blue: 136/255, opacity: 1.0)
 
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                     Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
-                        .opacity(0.1)
+                        .opacity(0)
+                        .border(Color.white, width: 2)
                     Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: geometry.size.height)
-                        .foregroundColor(Color(UIColor.white))
+                        .foregroundColor(greenTimer)
                         .animation(.default)
-                Image("confete 1").padding(.leading,380)
-                }.cornerRadius(60)
+//                Image("confete 1").padding(.leading,380)
+                }.cornerRadius(2)
             .padding(.top, -170)
             }.frame(height:9)
         .frame(width:400)

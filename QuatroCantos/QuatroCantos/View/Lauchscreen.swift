@@ -22,17 +22,17 @@ struct Launchscreen: View {
                 //.edgesIgnoringSafeArea(.all)
             VStack{
                 HStack {
-                    Button(action: {
-                        print("apertou botão de instruções")
-                        viewRouter.currentPage = .page6
-                    }, label: {
-                        Text("Instruções")
-                            .font(.custom("Poppins-Regular", size: 16))
-                            .foregroundColor(Color("roxo"))
-                            .fontWeight(.semibold)
-                            .underline()
-                            .padding(.trailing, UIScreen.main.bounds.width*0.75)
-                    })
+//                    Button(action: {
+//                        print("apertou botão de instruções")
+//                        viewRouter.currentPage = .page6
+//                    }, label: {
+//                        Text("Instruções")
+//                            .font(.custom("Poppins-Regular", size: 16))
+//                            .foregroundColor(Color("roxo"))
+//                            .fontWeight(.semibold)
+//                            .underline()
+//                            .padding(.trailing, UIScreen.main.bounds.width*0.75)
+//                    })
                     
                     // Chama a função starPlayback do audioPlayer
                     Button(action: {

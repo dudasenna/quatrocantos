@@ -52,8 +52,8 @@ struct TimeBar: View {
     
     //    let bgcolor = Color(red: 68/255, green: 181/255, blue: 163/255, opacity: 1.0)
     //
-    let perrengues: [String] = ["Já perdi o meu chinelo em Olinda", "Quase morri sufocade com o aperto", "Troquei Olinda pelo Galo da Madrugada", "Já voltei sentado no chão do ônibus"]
-    @State var perrengueAleatorio:String = "Já fui no bloco da Lama"
+    let perrengues: [String] = ["dei pt na treze de maio até a misericórdia", "já voltei de Olinda sentada no chão do ônibus", "senti cheirinho de sucesso", "troquei axé por pau-do-indio no amparo", "já passei por arrastão no REC’n’Play", "nunca emendei olinda com recife antigo"]
+    @State var perrengueAleatorio:String = "quase morri sufocade com o aperto"
     @State var contadorAuxiliar:Int = 0
     
     let bg_timer: [Image] = [Image("bg_timer2"),Image("bg_timer3"),Image("bg_timer4"),Image("bg_timer5"),Image("bg_timer6"),Image("bg_timer7")]
@@ -89,6 +89,7 @@ struct TimeBar: View {
                 .multilineTextAlignment(.center)
                 .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 .frame(width: 530)
+                .padding(.top, 35)
             
             
             Button(action: {
